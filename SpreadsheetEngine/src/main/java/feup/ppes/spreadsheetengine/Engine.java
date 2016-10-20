@@ -53,15 +53,11 @@ public final class Engine {
     }
 
     public static void addCellToSpreadsheet(String sname, String cname, double value) {
-        Spreadsheet spreadsheet = getSpreadsheet(sname);
-
-        spreadsheet.addCell(cname, value);
+        getSpreadsheet(sname).addCell(cname, value);
     }
 
     public static Cell getCellFromSpreadsheet(String sname, String cname) {
-        Cell cell = getSpreadsheet(sname).getCell(cname);
-
-        return cell;
+        return getSpreadsheet(sname).getCell(cname);
     }
 
     public static double getCellValue(String sname, String cname) {

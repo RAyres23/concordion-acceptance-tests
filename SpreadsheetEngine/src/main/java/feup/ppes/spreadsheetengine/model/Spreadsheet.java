@@ -19,7 +19,7 @@ public class Spreadsheet {
 
     public Spreadsheet(String name) {
         this.name = name;
-        cells = new HashMap();
+        cells = new HashMap<String, Cell>();
     }
 
     public String getName() {
