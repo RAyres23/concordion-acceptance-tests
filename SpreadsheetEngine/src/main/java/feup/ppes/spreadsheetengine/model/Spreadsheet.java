@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class Spreadsheet {
 
-    private String name;
+    private final String name;
     private final Map<String, Cell> cells;
 
     public Spreadsheet(String name) {
@@ -26,26 +26,22 @@ public class Spreadsheet {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Map<String, Cell> getCells() {
         return cells;
     }
 
     public void addCell(Cell cell) {
         if (cells.containsKey(cell.getName())) {
-            throw new IllegalArgumentException("Name for cell already used in "
-                    + "another cell. Please choose a different name");
+            throw new IllegalArgumentException(
+                    "Name for cell already used in " + "another cell. Please choose a different name");
         }
         cells.put(cell.getName(), cell);
     }
 
     public void addCell(String name, double value) {
         if (cells.containsKey(name)) {
-            throw new IllegalArgumentException("Name for cell already used in "
-                    + "another cell. Please choose a different name");
+            throw new IllegalArgumentException(
+                    "Name for cell already used in " + "another cell. Please choose a different name");
         }
         cells.put(name, new Cell(name, value));
     }

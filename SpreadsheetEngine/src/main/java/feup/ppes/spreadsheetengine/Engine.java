@@ -18,7 +18,7 @@ import java.util.Map;
  */
 public final class Engine {
 
-    private static final Map<String, Spreadsheet> SPREADSHEETS = new HashMap();
+    private static final Map<String, Spreadsheet> SPREADSHEETS = new HashMap<>();
 
     public static void addSpreadsheet(String name) {
         if (SPREADSHEETS.containsKey(name)) {

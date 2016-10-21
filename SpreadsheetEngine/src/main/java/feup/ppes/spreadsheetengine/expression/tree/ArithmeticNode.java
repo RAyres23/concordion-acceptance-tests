@@ -41,6 +41,9 @@ public abstract class ArithmeticNode implements Node {
     public abstract double operate();
 
     @Override
+    public abstract String text();
+
+    @Override
     public int hashCode() {
         int hash = 3;
         hash = 89 * hash + Objects.hashCode(this.left);

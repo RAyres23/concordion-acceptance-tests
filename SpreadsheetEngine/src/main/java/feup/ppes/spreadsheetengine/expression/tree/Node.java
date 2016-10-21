@@ -13,4 +13,6 @@ public interface Node {
 
     public double operate();
 
+    public String text();
+
 }

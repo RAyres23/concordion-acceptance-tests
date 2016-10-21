@@ -31,6 +31,11 @@ public class ValueNode implements Node {
     }
 
     @Override
+    public String text(){
+        return "" + this.value;
+    }
+
+    @Override
     public int hashCode() {
         int hash = 7;
         hash = 37 * hash + (int) (Double.doubleToLongBits(this.value) ^ (Double.doubleToLongBits(this.value) >>> 32));

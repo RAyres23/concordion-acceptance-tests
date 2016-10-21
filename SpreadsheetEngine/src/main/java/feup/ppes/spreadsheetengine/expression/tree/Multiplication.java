@@ -21,6 +21,11 @@ public class Multiplication extends ArithmeticNode {
     }
 
     @Override
+    public String text() {
+        return this.getLeft().text() + "*" + this.getRight().text();
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) {
             return false;
